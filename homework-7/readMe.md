@@ -1,4 +1,4 @@
-# H1 HoMeWoRk-7
+# HoMeWoRk-7
 ___
 1.[filter](https://github.com/sabovyan/homework/tree/master/homework-7/filter) </br>
 2. [map](https://github.com/sabovyan/homework/tree/master/homework-7/map) </br>
