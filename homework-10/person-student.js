@@ -108,20 +108,3 @@ class Student extends Person {
 		}
 	}
 }
-
-const marcus = new Student('marcus', 'Rashford', 'male', 28);
-marcus.programs = [
-	{
-		programName: 'Math',
-		grade: undefined,
-	},
-	{
-		programName: 'CS',
-		grade: undefined,
-	},
-];
-marcus.year = 2019;
-marcus.fee = 5000;
-console.log(marcus.passExam('Math', 50));
-console.log(marcus.passExam('CS', 50));
-console.log(marcus.toString());

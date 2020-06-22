@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-
+// SECTION Book
 class Book {
 	constructor(title, author) {
 		this._title = title;
@@ -43,13 +43,11 @@ class Book {
 		if (typeof book !== 'object') {
 			return 'the information about this book is not detailed';
 		}
-		if (book.author === this.author && book.title === this.title) {
-			return true;
-		}
-		return false;
+		return book.author === this.author && book.title === this.title;
 	}
 }
 
+// SECTION LibraryBookBase
 class LibrarayBookBase extends Book {
 	constructor(title, author, bookId) {
 		super(title, author);
@@ -114,6 +112,7 @@ class LibraryBook extends LibrarayBookBase {
 	}
 }
 
+// SECTION ReaderBook
 class ReaderBook extends LibrarayBookBase {
 	constructor(title, author, bookId, expirationDate, isReturned) {
 		super(title, author, bookId);
@@ -157,6 +156,7 @@ class ReaderBook extends LibrarayBookBase {
 	}
 }
 
+// SECTION Reader
 class Reader {
 	constructor(fName, lName, readerId, books) {
 		this._fName = fName;
@@ -230,16 +230,17 @@ class Reader {
 		return `${this.firstName} ${this.lastName} has ${this.books.length} books from the library`;
 	}
 
-	// borrowBook
 	borrowBook(book, library) {
 		if (library instanceof Library) {
 			const newBook = library.lendBook(book, this.readerId);
 			this.books.push(newBook);
 			return newBook;
 		}
+		throw new Error('Error');
 	}
 }
 
+// SECTION Library
 class Library {
 	constructor(books, readers) {
 		this._books = books;
@@ -280,7 +281,7 @@ class Library {
 		if (!(requestedBook instanceof Book)) {
 			return false;
 		}
-		for (let i = 0; i < this.books.length; i++) {
+		for (let i = 0; i < this.books.length; i += 1) {
 			if (requestedBook.isTheSameBook(this.books[i])) {
 				if (this.books[i].quantity > 1) {
 					return true;
@@ -303,43 +304,43 @@ class Library {
 		return newItems.every((item) => item instanceof Book);
 	}
 
-	// add book|
-
 	addBook(newBook) {
-		let book = newBook;
+		const foundbook = newBook;
 		this.sortByBookId();
-		if (Library.checkInstanceofBook(book)) {
-			for (let i = 0; i < this.books.length; i++) {
-				if (book.isTheSameBook(this.books[i])) {
+		if (Library.checkInstanceofBook(foundbook)) {
+			for (let i = 0; i < this.books.length; i += 1) {
+				if (foundbook.isTheSameBook(this.books[i])) {
 					this.books[i].increaseQuantityBy(1);
 					return 'we had this book';
 				}
 			}
-			book = new LibraryBook(book.title, book.author);
+			const libBook = new LibraryBook(foundbook.title, foundbook.author);
 			const last = this.books[this.books.length - 1];
-			book.bookId = last.bookId + 1;
-			book.quantity = 1;
-			this.books.push(book);
+			libBook.bookId = last.bookId + 1;
+			libBook.quantity = 1;
+			this.books.push(libBook);
 			return 'we added a new book';
 		}
 		throw new Error('invalid Book');
 	}
 
 	// add Book<S>
-
-	addBooks(...newBooks) {}
+	addBooks(newBooks) {
+		this.books.push(...newBooks);
+	}
 
 	// check Reader's ID
 	checkReaderId(readerId) {
 		if (typeof readerId !== 'number') {
 			throw new Error('Invalid ID');
 		}
-		for (const reader of this.readers) {
+		return this.readers.some((reader) => reader.readerId === readerId);
+		/* for (const reader of this.readers) {
 			if (reader.readerId === readerId) {
 				return true;
 			}
 		}
-		return false;
+		return false; */
 	}
 
 	static setExpirationDate() {

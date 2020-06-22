@@ -88,17 +88,3 @@ Book.prototype.toStirng = function toStirng() {
 		this.author
 	}\nwho is going to have $${this.getProfit()}`;
 };
-/*
-	getProfit
-
-	toStirng() {
-		 */
-
-const Tsitsernak = new Author('Tsitsernak', 'armen@mail.com', 'male');
-const shikahav = new Author('shikahav', 'arpen@mail.com', 'female');
-
-const swallow = new Book('swallow', Tsitsernak, 200, 1000);
-const robin = new Book('robin', shikahav, 10, 3000);
-console.log(swallow.toStirng());
-console.log(robin.toStirng());
-console.log(robin.author);
