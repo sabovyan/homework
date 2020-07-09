@@ -1,16 +1,20 @@
 {
-  "name": "algorithms",
-  "version": "1.0.0",
-  "description": "homework from ACA",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "sabovyan",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^7.4.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0"
-  }
+	"name": "algorithms",
+	"version": "1.0.0",
+	"description": "homework from ACA",
+	"main": "index.js",
+	"scripts": {
+		"doc": "jsdoc -c jsdoc.json",
+		"set2md": "jsdoc2md 0-set/*.js > 0-set/README.md",
+		"map2md": "jsdoc2md 1-map/*.js > 1-map/README.md"
+	},
+	"author": "sabovyan",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^7.4.0",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-plugin-import": "^2.22.0",
+		"jsdoc": "^3.6.4",
+		"jsdoc-to-markdown": "^6.0.1"
+	}
 }
