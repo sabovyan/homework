@@ -7,6 +7,9 @@
 <dt><a href="#getMinPositive">getMinPositive(arr)</a> ⇒ <code>number</code></dt>
 <dd><p>getMinPositive() will find minimal positive number</p>
 </dd>
+<dt><a href="#getSumOfDigits">getSumOfDigits(num)</a> ⇒ <code>number</code></dt>
+<dd><p>getSumOfDigits(num) calculates summary of all the digits of the given number. If the summary is grater than ten getSumOfDigits(num) will also summarize also those digits</p>
+</dd>
 <dt><a href="#isOdd">isOdd(n)</a> ⇒ <code>Boolean</code></dt>
 <dd><p>check if all the digits of the number is odd</p>
 </dd>
@@ -51,6 +54,25 @@ getMinPositive() will find minimal positive number
 getMinPositive([56, -9, 87, -23, 0, -105, 55, 1]); // returns 0
 getMinPositive([45, -9, 15, 5, -78]); // returns 5
 getMinPositive([-5, -9, -111, -1000, -7]); // returns -1
+```
+<a name="getSumOfDigits"></a>
+
+## getSumOfDigits(num) ⇒ <code>number</code>
+getSumOfDigits(num) calculates summary of all the digits of the given number. If the summary is grater than ten getSumOfDigits(num) will also summarize also those digits
+
+**Kind**: global function  
+**Returns**: <code>number</code> - summary of the digits  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| num | <code>number</code> | an arbitrary number |
+
+**Example** *(usage of getSumOfDigits(num))*  
+```js
+getSumOfDigits(23) // returns 5
+getSumOfDigits(29) // returns 2
+getSumOfDigits(999999999999) // returns 9
+getSumOfDigits(-45) // returns 9
 ```
 <a name="isOdd"></a>
 

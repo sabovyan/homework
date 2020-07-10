@@ -3,12 +3,9 @@
  * @param {number} n - takes any arbitrary number
  * @returns {Boolean} - false if any of the digits of the number is even, otherwise it will return true
  * @example <caption>usage of symmetricDifference(set1, set2)</caption>
- * isOdd(0)
- * //returns false
- * isOdd(5)
- * //returns true
- * isOdd(-1)
- * //throws a new error
+ * isOdd(0)  // returns false
+ * isOdd(5)  // returns true
+ * isOdd(-1) // throws a new error
  */
 
 function isOdd(n) {
