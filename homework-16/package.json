@@ -6,7 +6,8 @@
 	"scripts": {
 		"doc": "jsdoc -c jsdoc.json",
 		"set2md": "jsdoc2md 0-set/*.js > 0-set/README.md",
-		"map2md": "jsdoc2md 1-map/*.js > 1-map/README.md"
+		"map2md": "jsdoc2md 1-map/*.js > 1-map/README.md",
+		"rec2md": "jsdoc2md 2-recursion/*.js > 2-recursion/README.md"
 	},
 	"author": "sabovyan",
 	"license": "ISC",

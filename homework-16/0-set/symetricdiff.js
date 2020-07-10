@@ -9,7 +9,7 @@
  * @param {set} set1 -fist set
  * @param {set} set2 -second set
  * @returns {set} - union of (set1 - set2) and (set2 - set1)
- * @example <caption>Example usage of symmetricDifference(set1, set2)</caption>
+ * @example <caption>usage of symmetricDifference(set1, set2)</caption>
  * const setA = new Set([1, 2, 3, 4]);
  * const setC = new Set([3, 4, 5, 6]);
  * symadifference(setA, setC);

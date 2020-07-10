@@ -1,6 +1,6 @@
 {
 	"source": {
-		"include": ["src"],
+		"include": ["0-set", "1-map", "2-recursion"],
 		"includePattern": ".js$",
 		"excludePattern": "(node_modules/docs)"
 	},
