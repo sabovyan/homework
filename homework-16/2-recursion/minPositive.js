@@ -1,5 +1,5 @@
 /**
- *
+ *	getMinPositive() will find minimal positive number
  * @param {Array} arr - an array of arbitrary numbers
  * @returns {number} - the minimal positive number of the given array
  * @example <caption>Usage of minPositive.js</caption>
