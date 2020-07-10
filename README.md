@@ -20,7 +20,7 @@ Every Folder Represents particular Code For The Particular Tasks Form Different 
 >
 > 4.  🔗 [homework-10](https://github.com/sabovyan/homework/tree/master/homework-10)
 
-> Set / Map
+> Set / Map / (Recursion & merging sort)
 >
 > 4.  🔗 [homework-16](https://github.com/sabovyan/homework/tree/master/homework-16)
 
