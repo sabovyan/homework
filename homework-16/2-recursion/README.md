@@ -13,6 +13,12 @@
 <dt><a href="#isOdd">isOdd(n)</a> ⇒ <code>Boolean</code></dt>
 <dd><p>check if all the digits of the number is odd</p>
 </dd>
+<dt><a href="#merge">merge(arr1, arr2)</a> ⇒ <code>Array</code></dt>
+<dd><p>merge(arr1, arr2) will merge two sorted arrays into one sorted. it is a helper function for the main sorting merge</p>
+</dd>
+<dt><a href="#mergeSort">mergeSort(arr)</a> ⇒ <code>Array</code></dt>
+<dd><p>mergeSort(arr) will take an unsorted array and returns sorted one</p>
+</dd>
 <dt><a href="#recursiveFlat">recursiveFlat(arr)</a> ⇒ <code>array</code></dt>
 <dd></dd>
 <dt><a href="#removeFirstElem">removeFirstElem(arr)</a> ⇒ <code>array</code></dt>
@@ -88,12 +94,42 @@ check if all the digits of the number is odd
 
 **Example** *(usage of symmetricDifference(set1, set2))*  
 ```js
-isOdd(0)
-//returns false
-isOdd(5)
-//returns true
-isOdd(-1)
-//throws a new error
+isOdd(0)  // returns false
+isOdd(5)  // returns true
+isOdd(-1) // throws a new error
+```
+<a name="merge"></a>
+
+## merge(arr1, arr2) ⇒ <code>Array</code>
+merge(arr1, arr2) will merge two sorted arrays into one sorted. it is a helper function for the main sorting merge
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - merged two sorted arrays together  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr1 | <code>Array</code> | the first sorted array |
+| arr2 | <code>Array</code> | the secind sorted array |
+
+**Example** *(usage of merge(arr1, arr2) )*  
+```js
+merge([1, 2, 7, 99], [5, 13]) // returns [ 1, 2, 5, 7, 13, 99 ]
+```
+<a name="mergeSort"></a>
+
+## mergeSort(arr) ⇒ <code>Array</code>
+mergeSort(arr) will take an unsorted array and returns sorted one
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - sorted array  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> | an unsorted array |
+
+**Example** *(usage of mergeSort(arr))*  
+```js
+mergeSort([1, 3, 8, 10, 2, 4]) // returns [ 1, 2, 3, 4, 8, 10 ]
 ```
 <a name="recursiveFlat"></a>
 
