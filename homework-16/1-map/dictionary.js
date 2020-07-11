@@ -30,9 +30,9 @@ Set.prototype.remove = function (val) {
 
 class Dictionary {
 	/**
-	 *	creates a new Map(this.map)
+	 *	creates a new Map (this.map)
 	 * @param {object} item - takes key-value pairs
-	 * @returns {Map} - whereas the key points to the value, which is a Set.
+	 * @returns {Map} - where the key points to the value, which is a Set.
 	 *
 	 */
 	constructor(item) {
@@ -49,7 +49,7 @@ class Dictionary {
 	 * if the key exists the value/s will be add to that pair,
 	 * otherwise it will return a  new key - value/s pair.
 	 * @param {key} key - sets the first item as key
-	 * @param  {...any} values - sets the others as value
+	 * @param  {...any} values - sets the other/s as value/s
 	 * @example <caption>usage of add(key, ...values)</caption>
 	 *	dict.add(number, 'two', 'six')
 	 */
@@ -62,9 +62,9 @@ class Dictionary {
 	}
 
 	/**
-	 * remove(val) method removes map's property
+	 * remove(val) removes map's property
 	 * @param {key} key
-	 * @returns {Boolean} - if it's done true, otherwise false
+	 * @returns {Boolean} - if it's done returns true, otherwise false
 	 * @example <caption>usage of remove(key)</caption>
 	 * dict.remove('lol')
 	 */
@@ -81,7 +81,7 @@ class Dictionary {
 	 * @param {key} key
 	 * @returns value/s that the above-mentioned key is pointing
 	 * @example <caption>usage of getByKey(key)</caption>
-	 * dict.getByKey('num')
+	 * dict.getByKey('lol')
 	 */
 	getByKey(key) {
 		return this.map.get(key);
