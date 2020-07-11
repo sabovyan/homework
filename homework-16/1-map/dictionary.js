@@ -1,7 +1,7 @@
 /**
  * ANCHOR the worst solution in this world
  * @param {any} val - takes any argument
- * @returns {function delete(val)} - which is native deleting method of Set
+ * @returns {function} - which is native deleting method of Set
  *
  */
 
