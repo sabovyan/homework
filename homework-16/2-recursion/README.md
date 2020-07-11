@@ -7,6 +7,11 @@
 <dt><a href="#getMinPositive">getMinPositive(arr)</a> ⇒ <code>number</code></dt>
 <dd><p>getMinPositive() will find minimal positive number</p>
 </dd>
+<dt><a href="#getRotatedArray">getRotatedArray(arr, num)</a> ⇒ <code>Array</code></dt>
+<dd><p>Given an array and a number N.
+Write a recursive function that rotates an array N places to the left.
+(Hint: to add element to the beginning use arr.unshift())</p>
+</dd>
 <dt><a href="#getSumOfDigits">getSumOfDigits(num)</a> ⇒ <code>number</code></dt>
 <dd><p>getSumOfDigits(num) calculates summary of all the digits of the given number. If the summary is grater than ten getSumOfDigits(num) will also summarize also those digits</p>
 </dd>
@@ -61,6 +66,40 @@ getMinPositive([56, -9, 87, -23, 0, -105, 55, 1]); // returns 0
 getMinPositive([45, -9, 15, 5, -78]); // returns 5
 getMinPositive([-5, -9, -111, -1000, -7]); // returns -1
 ```
+<a name="getRotatedArray"></a>
+
+## getRotatedArray(arr, num) ⇒ <code>Array</code>
+Given an array and a number N.Write a recursive function that rotates an array N places to the left.(Hint: to add element to the beginning use arr.unshift())
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - - a reordered array  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> | takes an array |
+| num | <code>number</code> | takes a number |
+
+**Example** *(usage of getRotatedArray(arr, num))*  
+```js
+getRotatedArray(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], 3);
+// returns ['d', 'e', 'f', 'g', 'h', 'a', 'b', 'c']
+getRotatedArray(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], -2);
+// returns [ 'g', 'h', 'a', 'b', 'c', 'd', 'e', 'f']
+```
+<a name="getRotatedArray..rotateArray"></a>
+
+### getRotatedArray~rotateArray(innnerArr, innerNum, count) ⇒ <code>Array</code>
+the inner function of getRotatedArray
+
+**Kind**: inner method of [<code>getRotatedArray</code>](#getRotatedArray)  
+**Returns**: <code>Array</code> - - a reordered array  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| innnerArr | <code>Array</code> |  | takes an array from the outer function |
+| innerNum | <code>number</code> |  | takes a number from the outer function |
+| count | <code>number</code> | <code>0</code> | restricts the quantity of the recursive function |
+
 <a name="getSumOfDigits"></a>
 
 ## getSumOfDigits(num) ⇒ <code>number</code>
