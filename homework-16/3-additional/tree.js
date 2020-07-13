@@ -37,7 +37,7 @@ let tree = {
 };
 
 /**
- *  a function that will return
+ *  a function that will return all the values(number) from the object(singly linked list) as an array
  * @param {object} tree - singly linked list
  * @returns {function} - which will turn singly linked list into an array of values
  * @example <caption>usage of fn(tree)</caption>
