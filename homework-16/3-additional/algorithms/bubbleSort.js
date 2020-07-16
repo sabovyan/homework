@@ -20,6 +20,10 @@ const swap = (arr, idx1, idx2) => {
  */
 const bubbleSort = (items) => {
 	const size = items.length;
+	/**
+	 * noswaps
+	 * @type {boolean} - this variable helps to control the number of iterations. it is very useful for nearly sorted arrays
+	 */
 	let noswaps;
 	for (let i = size; i > 0; i -= 1) {
 		noswaps = true;
