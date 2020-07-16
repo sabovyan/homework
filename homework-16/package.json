@@ -8,7 +8,8 @@
 		"set2md": "jsdoc2md 0-set/*.js > 0-set/README.md",
 		"map2md": "jsdoc2md 1-map/*.js > 1-map/README.md",
 		"rec2md": "jsdoc2md 2-recursion/*.js > 2-recursion/README.md",
-		"add2md": "jsdoc2md 3-additional/*.js > 3-additional/README.md"
+		"add2md": "jsdoc2md 3-additional/*.js > 3-additional/README.md",
+		"al2md": "jsdoc2md 3-additional/algorithms/*.js > 3-additional/algorithms/README.md"
 	},
 	"author": "sabovyan",
 	"license": "ISC",

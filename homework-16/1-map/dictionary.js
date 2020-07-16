@@ -1,4 +1,8 @@
 /**
+ * @see <a href="https://repl.it/@vrezhhovanisyan/algorithms#set_map/Set.js">assignment</a>
+ */
+
+/**
  * ANCHOR the worst solution in this world
  * @param {any} val - takes any argument
  * @returns {function} - which is native deleting method of Set

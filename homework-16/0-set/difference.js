@@ -1,5 +1,4 @@
 /**
- * @file difference.js
  * @see <a href="https://repl.it/@vrezhhovanisyan/algorithms#set_map/Set.js">assignment</a>
  */
 
@@ -26,6 +25,7 @@ function difference(set1, set2) {
 }
 
 const setA = new Set([1, 2, 3, 4]);
-// const setB = new Set([2, 3]);
+const setB = new Set([2, 3]);
 const setC = new Set([3, 4, 5, 6]);
 difference(setA, setC);
+difference(setA, setB);
