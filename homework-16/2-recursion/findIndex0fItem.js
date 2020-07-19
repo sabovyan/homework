@@ -9,17 +9,14 @@
 
 function findBrokenItem(arr) {
 	function finditem(nArr, item = arr[0]) {
-		// if it is relative to our case return false
 		if (nArr.length === 1) {
 			return -1;
 		}
-		// compare two items
 		if (item > nArr[1]) {
 			item = nArr[1];
 			return item;
 		}
 		item = nArr[1];
-		// else
 		return finditem(nArr.slice(1), item);
 	}
 

@@ -56,7 +56,6 @@ const fn = (tree) => {
 		if (tree === null) {
 			return arr;
 		}
-		console.log(tree.value);
 		arr.push(tree.value);
 		arr.push(fn(tree.next, arr));
 		return arr.flat();
