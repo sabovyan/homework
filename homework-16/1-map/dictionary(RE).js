@@ -9,10 +9,9 @@
  *
  */
 
-// eslint-disable-next-line no-extend-native
-Set.prototype.remove = function (val) {
+/* Set.prototype.remove = function (val) {
 	return this.delete(val);
-};
+}; */
 
 /**
  * @class
@@ -61,9 +60,10 @@ class Dictionary {
 	add(key, ...values) {
 		if (this.map.has(key)) {
 			this.map.get(key).add(...values);
+		} else {
+			const val = new Set([...values]);
+			this.map.set(key, val);
 		}
-		const val = new Set([...values]);
-		this.map.set(key, val);
 	}
 
 	/**
@@ -91,8 +91,9 @@ class Dictionary {
 	getByKey(key) {
 		return {
 			value: this.map.get(key),
-			remove(value) {
-				value.delete();
+			remove(val) {
+				this.value.delete(val);
+				return true;
 			},
 		};
 	}
@@ -135,3 +136,14 @@ class Dictionary {
 		return res.flat();
 	}
 }
+
+const dict = new Dictionary({ key: 'value', secondKey: 'value2' });
+
+dict.add('num', 10);
+dict.add('num', 12);
+
+console.log(dict.getByKey('num'));
+
+dict.getByKey('num').remove(10);
+
+console.log(dict.getByKey('num')); // [200]
