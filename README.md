@@ -22,6 +22,10 @@ Every Folder Represents particular Code For The Particular Tasks Form Different 
 
 > Set / Map / (Recursion & merging sort)
 >
-> 4.  🔗 [homework-16](https://github.com/sabovyan/homework/tree/master/homework-16)
+> 5.  🔗 [homework-16](https://github.com/sabovyan/homework/tree/master/homework-16)
+
+> DOM
+>
+> 5.  🔗 [homework-17](https://github.com/sabovyan/homework/tree/master/homework-17)
 
 ---
