@@ -1,7 +1,9 @@
 #excluding node_modules
 /homework-16/node_modules
+/homework-17/node_modules
 
 # excluding jsdocs result
 /homework-16/docs
 # excluding vs code configuration
 /.vscode
+
