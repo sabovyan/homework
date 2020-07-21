@@ -5,16 +5,13 @@
 }
 body {
 	height: 100vh;
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	background-color: rgba(182, 181, 181, 0.281);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: white;
 	letter-spacing: 2px;
 }
 .wrapper {
-	grid-column: 2/5;
-	grid-row: 2/3;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -47,14 +44,32 @@ body {
 	letter-spacing: 2px;
 	transition: background 0.5s;
 }
-.date-btn:hover {
-	background-position: 182px 50px;
-	font-size: 22px;
+.left-anime {
+	animation: btn-left-anime 1s forwards;
+}
+.right-anime {
+	animation: btn-right-anime 1s forwards;
 }
 
+@keyframes btn-left-anime {
+	from {
+		background-position: 0 50px;
+	}
+	to {
+		background-position: -202px 50px;
+	}
+}
+@keyframes btn-right-anime {
+	from {
+		background-position: 0 50px;
+	}
+	to {
+		background-position: 202px 50px;
+	}
+}
 .date-time {
 	padding: 1rem;
-	font-size: 20px;
+	font-size: 1rem;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	transform: translate(120%, 0);
 	transition: transform 1s;
@@ -67,8 +82,9 @@ body {
 
 .date-time > div {
 	text-align: end;
+	margin: 1rem 0;
 }
 
 .time {
-	font-size: 45px;
+	font-size: 25px;
 }
