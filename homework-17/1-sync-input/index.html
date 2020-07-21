@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+
+      body {
+         display: flex;
+         justify-content: center;
+      }
+
+      #text,
+      #output {
+         padding: 1rem;
+         margin: 1rem;
+         width: 300px;
+      }
+
+      .wrapper {
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+      }
+
+      #text {
+         border: 1px solid red;
+         outline: none;
+
+      }
+
+      #output {
+
+         word-wrap: break-word;
+         min-height: 150px;
+         background: linear-gradient(to bottom, black 1px,
+               white 1px,
+               white 25px,
+               black 6px);
+         background-position: 5px 12px;
+         background-size: 50px 27px;
+         line-height: 27px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrapper">
+      <input type="text" name="text" id="text" autocomplete="off">
+      <p id="output"></p>
+   </div>
+
+   <script src="main.js"></script>
+</body>
+
+</html>
