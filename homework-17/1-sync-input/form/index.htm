@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="l-wrapper">
+
+
+  <form class="c-deposit" id="deposit" action="">
+    <div class="c-deposit__personal l-deposit__item">
+      <h3 class="c-deposit__title">Personalia</h3>
+
+      <label for="name">
+        <span class="c-deposit__label">name</span>
+        <input type="text" name="name" id="name" class="c-deposit__input" autocomplete="off">
+      </label>
+
+      <label for="surname">
+        <span class="c-deposit__label">surname</span>
+        <input type="text" name="surname" id="surname" class="c-deposit__input" autocomplete="off">
+      </label>
+      
+      <label for="email">
+        <span class="c-deposit__label">Email</span>
+        <input type="email" name="email" id="email" class="c-deposit__input" autocomplete="off">
+      </label>
+
+ 
+    <label for="phone-number">
+      <span class="c-deposit__label">Tel.</span>
+      <input type="number" name="phone-number" id="phone-number" class="c-deposit__input" autocomplete="off">
+    </label>
+
+    </div>
+
+    <div class="c-deposit__calculator l-deposit__item">
+      <h3 class="c-deposit__title">Calculator</h3>
+
+      <label for="initial-value">
+        <span class="c-deposit__label">initial value</span>
+        <input type="number" name="initial-value" id="initial-value" class="c-deposit__input">
+      </label>
+
+      <label for="months">
+        <span class="c-deposit__label">How many months?</span>
+       <select name="months" id="months" class="c-deposit__input">
+        <option value="3">3 (minimum)</option>
+        <option value="6">6 (half-year)</option>
+        <option value="12" selected>12 (one year)</option>
+        <option value="18">18 (1.5 years)</option>
+        <option value="24">24 (2 years)</option>
+        <option value="30">30 (2.5 years)</option>
+        <option value="36">36 (3 years)</option>
+        <option value="60">60 (5 years)</option>
+       </select>
+      </label>
+
+      <label for="interest">
+        <span class="c-deposit__label">Interest per year?	</span>
+        <input type="number" name="interest" id="interest" class="c-deposit__input">
+      </label> 
+
+      <button id="calculate" class="c-deposit__input c-deposit__button">Calculate</button>
+      
+      <button id="submit" 
+      type="submit" class="c-deposit__input c-deposit__button" >Submit</button>
+    </div>
+  </form>
+
+
+  <div class="visual">
+
+    <div class="visual__input visual__item">
+      <h4 class="visual__title">Initial value</h4>
+      <p class="visual__number input-number">100</p>
+      <div class="visual__before visual__display"></div>
+    </div>
+
+    <div class="visual__output visual__item">
+      <h4 class="visual__title">computed result</h4>
+      <p class="visual__number input-number">100</p>
+      <div class="visual__after visual__display"></div>
+    </div>
+    
+  </div>
+
+
+</div>
+  <script src="main.js"></script>
+</body>
+</html>
