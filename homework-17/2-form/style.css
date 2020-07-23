@@ -1,36 +1,35 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.l-wrapper{
+.l-wrapper {
   display: flex;
- 
- 
- 
+
   flex-direction: column;
 }
 
-.c-deposit{
+.c-deposit {
   width: 100%;
-display: flex;
-justify-content: space-around;
-align-items: baseline;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
-.l-deposit__item{
+.l-deposit__item {
   margin: 1rem 0;
 }
 
-.c-deposit__title{
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem 0;
-    text-transform: capitalize;
+.c-deposit__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem 0;
+  text-transform: capitalize;
 }
 
-#deposit label{
+#deposit label {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
@@ -43,12 +42,12 @@ align-items: baseline;
   text-transform: capitalize;
 }
 
-input[type="number"]::-webkit-outer-spin-button, 
-input[type="number"]::-webkit-inner-spin-button {
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
-} 
+}
 
-.c-deposit__input{
+.c-deposit__input {
   width: 250px;
   padding: 0.5rem;
   border-radius: 5px;
@@ -56,40 +55,60 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 16px;
 }
 
-.c-deposit__input:focus{
+.c-deposit__input:focus {
   outline: none;
   border: 2px solid black;
 }
-.c-deposit__button{
+.c-deposit__button {
   display: block;
-  margin: .5rem 0;
+  margin: 2.6rem 0 0;
   background: black;
   color: white;
+  letter-spacing: 12px;
+  font-weight: 500;
+  transition: color 0.3s, background-color 0.3s;
 }
-.visual{
+.c-deposit__button:hover {
+  background: white;
+  color: black;
+}
+
+.visual {
   padding: 0.3rem;
+  display: flex;
 }
-.visual__item{
+.visual__item {
   border: 1px solid;
-  padding: 0.3rem;
+  padding: 0.9rem;
   margin: 0.5rem;
+  width: 50%;
 }
-.visual__title{
+.visual__title {
   text-transform: capitalize;
-  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+
   font-weight: normal;
+  border-bottom: 1px solid;
 }
-.visual__display{
+.visual__number {
+  height: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+.visual__display {
   width: 100px;
   height: 30px;
-  border: 1px solid;
-  background: linear-gradient(45deg, 
-  rgba(0, 0, 0, 0.4) 10px, 
-  white 12px,
-  white 23px, 
-  rgba(0, 0, 0, 0.4) 23px, 
-  rgba(0, 0, 0, 0.4) 33px, 
-  white 34px
+  border-radius: 1px;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.322),
+    -3px -3px 3px rgba(128, 128, 128, 0.178);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.4) 10px,
+    white 12px,
+    white 23px,
+    rgba(0, 0, 0, 0.4) 23px,
+    rgba(0, 0, 0, 0.4) 33px,
+    white 34px
   );
   background-size: 31px;
+  transition: width 0.5s;
 }
