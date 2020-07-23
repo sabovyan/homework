@@ -4,7 +4,6 @@
   "description": "DOM exercises",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "date2md": "jsdoc2md 0-datetime/*.js > 0-datetime/README.md"
   },
   "author": "",

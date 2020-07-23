@@ -1,0 +1,11 @@
+.hover {
+  background-color: red;
+}
+.done {
+  text-decoration: line-through;
+}
+.c-list__item {
+  cursor: pointer;
+  margin: 0.2rem;
+  padding: 0.5rem;
+}
