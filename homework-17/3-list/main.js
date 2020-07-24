@@ -1,68 +1,44 @@
-const container = document.querySelector('.c-list__container');
 const listItems = document.querySelectorAll('.c-list__item');
 const toolTip = document.getElementById('toolTip');
 
-function setStatus(particle) {
-  if (particle.classList.contains('done')) {
-    particle.classList.remove('done');
+function setStatus(particle, className) {
+  if (particle.classList.contains(className)) {
+    particle.classList.remove(className);
   } else {
-    particle.classList.add('done');
+    particle.classList.add(className);
   }
 }
 
 listItems.forEach((item) => {
   item.addEventListener('mouseover', () => {
-    item.classList.add('hover');
+    setStatus(item, 'hover');
   });
 
   item.addEventListener('mouseout', () => {
-    item.classList.remove('hover');
+    setStatus(item, 'hover');
   });
 
   item.addEventListener('click', () => {
     toolTip.innerText = '';
     if (item.previousElementSibling === null) {
       if (item.nextElementSibling.classList.contains('done')) {
-        toolTip.innerText = 'Ooops!';
+        toolTip.innerText = '🤦‍♂️';
       } else {
-        setStatus(item);
+        setStatus(item, 'done');
       }
-    } else if (item.nextElementSibling === null) {
-      if (!item.previousElementSibling.classList.contains('done')) {
-        toolTip.innerText = 'Ooops!';
+    } else if (item.previousElementSibling.classList.contains('done')) {
+      if (item.nextElementSibling === null) {
+        setStatus(item, 'done');
+      } else if (
+        item.nextElementSibling.classList.contains('done') &&
+        !(item.nextElementSibling === null)
+      ) {
+        toolTip.innerText = '🤦‍♂️';
       } else {
-        setStatus(item);
+        setStatus(item, 'done');
       }
     } else {
-      if (item.previousElementSibling.classList.contains('done')) {
-        setStatus(item);
-      } else if (item.nextElementSibling.classList.contains('done')) {
-        toolTip.innerText = 'Ooops!';
-      } else {
-        toolTip.innerText = 'Ooops!';
-      }
+      toolTip.innerText = '🤦‍♂️';
     }
   });
 });
-/*  if (
-      !(item.previousElementSibling === null) &&
-      !(item.nextElementSibling === null)
-    ) {
-      if (
-        item.previousElementSibling.classList.contains('done') &&
-        !item.nextElementSibling.classList.contains('done')
-      ) {
-        setStatus(item);
-      }
-    } else if (item.previousElementSibling === null) {
-      if (!item.nextElementSibling.classList.contains('done')) {
-        setStatus(item);
-      }
-    } else if (item.nextElementSibling === null) {
-      if (item.previousElementSibling.classList.contains('done')) {
-        setStatus(item);
-      }
-    } else {
-      toolTip.innerText = 'Ooops!';
-    }
- */
