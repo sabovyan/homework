@@ -1,0 +1,63 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+.carousel-container {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-slide {
+  display: flex;
+}
+.carousel-image {
+  height: 500px;
+}
+.image-1,
+.image-1__clone {
+  filter: invert(100%) hue-rotate(290deg);
+}
+.image-2 {
+  filter: invert(100%) hue-rotate(210deg);
+}
+.image-3 {
+  filter: invert(100%) hue-rotate(140deg);
+}
+.image-4 {
+  filter: invert(100%) hue-rotate(70deg);
+}
+.image-5,
+.image-5__clone {
+  filter: hue-rotate(10deg) invert(100%);
+}
+.sliderBtn {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(5px);
+  border: none;
+  color: red;
+  font-size: 20px;
+  outline: none;
+}
+.sliderBtn:hover {
+  background-color: rgba(58, 184, 184, 0.342);
+  color: white;
+}
+.next {
+  right: 0;
+}
+.prev {
+  left: 0;
+}
