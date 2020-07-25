@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.elem {
+  font-size: 12px;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+.color__form {
+  border: 1px solid;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.input__section {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.input__label {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+input[type='text'] {
+  padding: 10px;
+  font-size: 1.2rem;
+  height: 50px;
+  width: 200px;
+}
+
+button[type='submit'] {
+  height: 50px;
+  width: 100px;
+  color: white;
+  background-color: black;
+  margin: 5px;
+}
+input[type='text'],
+button {
+  border-radius: 3px;
+  outline: none;
+}
