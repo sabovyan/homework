@@ -26,6 +26,6 @@ Every Folder Represents particular Code For The Particular Tasks Form Different 
 
 > DOM
 >
-> 5.  🔗 [homework-17](https://github.com/sabovyan/homework/tree/master/homework-17)
+> 6.  🔗 [homework-17](https://github.com/sabovyan/homework/tree/master/homework-17)
 
 ---
