@@ -15,16 +15,28 @@
           type="text"
           name="background"
           id="input__bg"
-          placeholder="#cdcd67"
+          placeholder="cdcd67"
+          maxlength="6"
+          minlength="3"
         />
       </section>
       <section class="input__cl-section input__section">
         <label class="input__label" for="input__cl ">Color</label>
-        <input type="text" name="color" id="input__cl" placeholder="#cdcd67" />
+        <input
+          type="text"
+          name="color"
+          id="input__cl"
+          placeholder="cdcd67"
+          maxlength="6"
+          minlength="3"
+        />
       </section>
       <button id="submitBtn" type="submit">Apply</button>
     </form>
-
-    <script src="script.js"></script>
+    <p style="margin: 1rem;">
+      please choose one of the paragraph find the color that you want and hit
+      the apply button
+    </p>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
