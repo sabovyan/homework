@@ -1,3 +1,12 @@
+const submitBtn = document.getElementById('submit');
+const visualtitle = document.querySelector('.output-title');
+const visualoutput = document.querySelector('.output-number');
+const initial = document.getElementById('initial-value');
+const months = document.getElementById('months');
+const interest = document.getElementById('interest');
+const ComputedResult = document.querySelector('.output-number');
+const visualRange = document.querySelector('.visual__after');
+
 /**
  * @type {object} - it will collect all the data from the form
  */
@@ -6,7 +15,7 @@ let inputValue = '';
 
 const form = document.getElementById('deposit');
 /**
- *
+ * @event input
  * @listens form
  * takes all the data from form and place it in the
  */
@@ -16,22 +25,18 @@ form.addEventListener('input', (event) => {
   inputValue = '';
 });
 
-const submitBtn = document.getElementById('submit');
-const visualtitle = document.querySelector('.output-title');
-const visualoutput = document.querySelector('.output-number');
 submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
   output[visualtitle.textContent] = visualoutput.textContent;
+  // eslint-disable-next-line no-alert
   alert(JSON.stringify(output));
 });
 
-// calculator
-const initial = document.getElementById('initial-value');
-const months = document.getElementById('months');
-const interest = document.getElementById('interest');
-const ComputedResult = document.querySelector('.output-number');
-const visualRange = document.querySelector('.visual__after');
-
+/**
+ * getResult() will count all the values of the input and will update "chart" immediately
+ * @type {Function}
+ * @returns {void}
+ */
 function getResult() {
   const money = initial.value;
   const years = months.value / 12;

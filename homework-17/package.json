@@ -4,7 +4,13 @@
   "description": "DOM exercises",
   "main": "index.js",
   "scripts": {
-    "date2md": "jsdoc2md 0-datetime/*.js > 0-datetime/README.md"
+    "date2md": "jsdoc2md 0-datetime/*.js > 0-datetime/README.md",
+    "input2md": "jsdoc2md 1-input/*.js > 1-input/README.md",
+    "form2md": "jsdoc2md 2-form/*.js > 2-form/README.md",
+    "list2md": "jsdoc2md 3-list/*.js > 3-list/README.md",
+    "slide2md": "jsdoc2md 4-slideBar/**/*.js > 4-slideBar/README.md",
+    "para2md": "jsdoc2md 5-paragraph/**/*.js > 5-paragraph/README.md",
+    "tab2md": "jsdoc2md 6-table/**/*.js > 6-table/README.md"
   },
   "author": "",
   "license": "ISC",

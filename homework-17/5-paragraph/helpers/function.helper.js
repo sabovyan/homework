@@ -1,8 +1,19 @@
+/**
+ *
+ * @param {number} num
+ * @returns {number} a random number based on the argument
+ */
 export function randomNumber(num) {
   const res = Math.floor(Math.random() * num);
   return res;
 }
-export function checkPhoneKey(key) {
+
+/**
+ *
+ * @param {key} key
+ * @returns {} restricted rules for inputs
+ */
+export function restitInput(key) {
   return (
     (key >= '0' && key <= '9') ||
     (key >= 'a' && key <= 'f') ||

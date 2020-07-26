@@ -1,3 +1,9 @@
+/**
+ * @name textInside
+ * @type {array}
+ * @description consists of several different texts for p tags
+ */
+
 export const textInside = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in accumsan libero. Proin vulputate ligula vel risus mattis, ac malesuada nisl dapibus. Duis posuere diam quam, lobortis vestibulum sapien accumsan eu. Aliquam fringilla nisl libero, ut ultrices sem finibus non. Aliquam erat volutpat.',
   'Sed commodo lorem vitae ipsum pharetra egestas. Nunc iaculis massa turpis, a commodo ex gravida et. Nam sit amet venenatis metus. Curabitur ut tortor ut nisi lacinia auctor. Sed consectetur, ante vitae ultricies finibus, ligula est pellentesque risus, a suscipit massa nisl aliquam tortor.',
