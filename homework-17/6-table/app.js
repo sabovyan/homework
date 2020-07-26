@@ -10,6 +10,13 @@ import {
   updateTable,
 } from './helper/function.helper.js';
 
+/**
+ * @description take into account i have made this one after our lesson
+ */
+
+/**
+ * @type {Array} array of objects
+ */
 const sortingType = {
   default: {
     name: 'default',
@@ -43,6 +50,11 @@ tbody.append(makeRow(['kong', 52, 6.4]));
 tbody.append(makeRow(['king', 8, 7.3]));
 tbody.append(makeRow(['queen', 18, 8.1]));
 
+/**
+ * @type {function}
+ * @returns {void}
+ * @description it will sort the order of the table
+ */
 const render = () => {
   tbody.innerHTML = '';
   if (state.order === sortingType.default.name) {
@@ -56,6 +68,11 @@ const render = () => {
   updateTable(students, tbody);
 };
 
+/**
+ * @event keydown
+ * @listens window
+ * @fires row - a new table row
+ */
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     if (isEmpty(tableInputs)) {
@@ -70,6 +87,11 @@ window.addEventListener('keydown', (event) => {
   }
 });
 
+/**
+ * @event click
+ * @listens age
+ * @fires table - reordered table
+ */
 age.addEventListener('click', () => {
   render();
 });
