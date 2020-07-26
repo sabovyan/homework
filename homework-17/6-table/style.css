@@ -1,0 +1,15 @@
+.table__students {
+  border-collapse: collapse;
+}
+td,
+th {
+  text-align: center;
+  border: 1px solid;
+  width: 100px;
+  height: 50px;
+  padding: 5px;
+  font-size: 1rem;
+}
+.order__icon {
+  margin-left: 16px;
+}

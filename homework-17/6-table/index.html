@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
-    <style>
-      .table__student {
-        border-collapse: collapse;
-      }
-      td,
-      th {
-        text-align: center;
-        border: 1px solid;
-        width: 100px;
-        height: 50px;
-      }
-    </style>
   </head>
   <body>
-    <table class="table__student">
+    <table class="table__students">
       <thead class="table__head">
         <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Average Grade</th>
+          <th class="header__name">Name</th>
+          <th class="header__age">Age <span class="order__icon">-</span></th>
+          <th class="header__grade">Average Grade</th>
         </tr>
       </thead>
       <tbody class="table__body"></tbody>
       <tfoot class="table__footer">
         <tr>
           <td>
-            <input class="tfoot__input" type="text" name="name" id="name" />
+            <input
+              class="tfoot__input"
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+            />
           </td>
           <td>
-            <input class="tfoot__input" type="number" name="age" id="age" />
+            <input
+              class="tfoot__input"
+              type="number"
+              name="age"
+              id="age"
+              autocomplete="off"
+            />
           </td>
           <td>
             <input
@@ -42,11 +42,12 @@
               type="number"
               name="averGrade"
               id="averGrade"
+              autocomplete="off"
             />
           </td>
         </tr>
       </tfoot>
     </table>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
