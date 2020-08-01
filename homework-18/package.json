@@ -1,0 +1,17 @@
+{
+  "name": "homework-18",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jsdoc": "^3.6.5",
+    "jsdoc-to-markdown": "^6.0.1"
+  }
+}
