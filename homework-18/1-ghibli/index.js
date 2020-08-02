@@ -42,7 +42,7 @@ fetch('https://ghibliapi.herokuapp.com/films')
   .then((r) => r.json())
   .then((json) => {
     json.sort((a, b) => (a.release_date > b.release_date ? -1 : 1));
-    // eslint-disable-next-line camelcase
+
     json.forEach(({ title, release_date, director, description }) => {
       createHTML(title, release_date, director, description);
     });
