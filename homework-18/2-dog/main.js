@@ -31,5 +31,6 @@ function getImage(breed) {
  * @fires  HTMLElement
  */
 breed.addEventListener('change', (e) => {
+  imageContainer.innerHTML = '';
   getImage(e.target.value);
 });
