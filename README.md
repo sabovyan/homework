@@ -30,6 +30,6 @@ Every Folder Represents particular Code For The Particular Tasks Form Different 
 
 > Promices
 >
-> 7.  🔗 [homework-17](https://github.com/sabovyan/homework/tree/master/homework-17)
+> 7.  🔗 [homework-18](https://github.com/sabovyan/homework/tree/master/homework-18)
 
 ---
