@@ -8,19 +8,19 @@
  */
 
 function findBrokenItem(arr) {
-	function finditem(nArr, item = arr[0]) {
-		if (nArr.length === 1) {
-			return -1;
-		}
-		if (item > nArr[1]) {
-			item = nArr[1];
-			return item;
-		}
-		item = nArr[1];
-		return finditem(nArr.slice(1), item);
-	}
+  function finditem(nArr, item = arr[0]) {
+    if (nArr.length === 1) {
+      return -1;
+    }
+    if (item > nArr[1]) {
+      item = nArr[1];
+      return item;
+    }
+    let newItem = nArr[1];
+    return finditem(nArr.slice(1), newItem);
+  }
 
-	return arr.indexOf(finditem(arr));
+  return arr.indexOf(finditem(arr));
 }
 findBrokenItem([-9, -4, -4, 3, 12, 4, 5]);
 findBrokenItem([2, 12, 15, 48, 64]);
