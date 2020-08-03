@@ -73,14 +73,32 @@ th {
   align-items: center;
   justify-content: center;
 }
-.display__body tr:nth-child(even) {
+.display__body tr:nth-child(odd) {
   background-color: rgb(224, 234, 238);
 }
-.display__body tr:nth-child(odd) {
+.display__body tr:nth-child(even) {
   background-color: rgb(189, 210, 241);
+}
+
+.last {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.last span {
+  margin: 4px;
+  /* width: 90%; */
+  border: 1px solid;
+  padding: 4px;
+}
+
+.last span:hover {
+  color: blue;
 }
 @media (max-width: 700px) {
   .display__body tr {
     font-size: 0.7rem;
+  }
+  .last {
+    grid-template-columns: 1fr;
   }
 }
