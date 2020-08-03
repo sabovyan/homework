@@ -13,3 +13,8 @@ export function makeURLComponent(value) {
   }
   return res;
 }
+
+export const getPagesNumber = (num) => {
+  const numOfPages = Math.ceil(num / 100);
+  return numOfPages;
+};

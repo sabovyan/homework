@@ -22,3 +22,32 @@ export function createHTML(book, element) {
 
   return tr;
 }
+
+export const createPageNumbers = (quantity, pages, pageNumber) => {
+  if (quantity <= 1) {
+    return false;
+  }
+  const spanLeft = document.createElement('span');
+  const spanRight = document.createElement('span');
+
+  spanLeft.classList.add('left');
+  spanRight.classList.add('right');
+  spanLeft.textContent = '>';
+  spanRight.textContent = '<';
+
+  pages.append(spanRight);
+
+  for (let i = 1; i <= quantity; i += 1) {
+    const span = document.createElement('span');
+    if (i === pageNumber) {
+      console.log(pageNumber);
+      span.classList.add('active');
+    }
+    span.classList.add('page');
+    span.textContent = i;
+    pages.append(span);
+  }
+
+  pages.append(spanLeft);
+  return pages;
+};
