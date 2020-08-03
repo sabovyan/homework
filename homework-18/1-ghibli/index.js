@@ -24,7 +24,7 @@ function createHTML(...items) {
  */
 const appearOptions = {
   threshold: 0,
-  rootMargin: '0px 0px -250px 0px',
+  rootMargin: '0px 0px -100px 0px',
 };
 
 // eslint-disable-next-line no-shadow
@@ -52,4 +52,8 @@ fetch('https://ghibliapi.herokuapp.com/films')
     trs.forEach((tr) => {
       appearOnScroll.observe(tr);
     });
+  })
+  .catch((err) => {
+    console.log(err);
+    body.innerHTML = err.message;
   });
