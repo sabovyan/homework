@@ -22,6 +22,10 @@ function getImage(breed) {
     .then((r) => r.json())
     .then((json) => {
       createHTMLImage(json.message);
+    })
+    .catch((err) => {
+      console.error(err);
+      imageContainer.innerHTML = err.message;
     });
 }
 
