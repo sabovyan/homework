@@ -101,6 +101,17 @@
   }
 }
 
+.pagination {
+  display: flex;
+  justify-content: space-around;
+}
+.pagination > * {
+  cursor: pointer;
+}
+.active {
+  color: blue;
+}
+
 @media (max-width: 500px) {
   .form__title {
     font-size: 1.6rem;

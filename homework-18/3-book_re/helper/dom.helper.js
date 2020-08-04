@@ -39,8 +39,7 @@ export const createPageNumbers = (quantity, pages, pageNumber) => {
 
   for (let i = 1; i <= quantity; i += 1) {
     const span = document.createElement('span');
-    if (i === pageNumber) {
-      console.log(pageNumber);
+    if (i === Number(pageNumber)) {
       span.classList.add('active');
     }
     span.classList.add('page');
