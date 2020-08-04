@@ -1,26 +1,27 @@
 export function createHTML(book, element) {
-  const tr = document.createElement('tr');
+  const item = document.createElement('div');
+  item.classList.add('book');
   // eslint-disable-next-line no-restricted-syntax
   for (const val of Object.values(book)) {
     if (!Array.isArray(val)) {
-      const td = document.createElement('td');
-      td.textContent = val;
-      tr.append(td);
+      const div = document.createElement('div');
+      div.textContent = val;
+      item.append(div);
     } else {
-      const td = document.createElement('td');
-      td.classList.add('last');
+      const div = document.createElement('div');
+      div.classList.add('last');
       val.forEach((el) => {
         const span = document.createElement('span');
         span.textContent = el;
-        td.append(span);
-        tr.append(td);
+        div.append(span);
+        item.append(div);
       });
     }
 
-    element.append(tr);
+    element.append(item);
   }
 
-  return tr;
+  return item;
 }
 
 export const createPageNumbers = (quantity, pages, pageNumber) => {

@@ -1,11 +1,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable camelcase */
 import { Book } from './helper/class.helper.js';
-import {
-  makeURLComponent,
-  getPagesNumber,
-  styleForm,
-} from './helper/function.helper.js';
+import { makeURLComponent } from './helper/function.helper.js';
 import { getData } from './helper/fetch.helper.js';
 import { createHTML, createPageNumbers } from './helper/dom.helper.js';
 
@@ -15,17 +11,16 @@ const formTitle = document.querySelector('.form__title');
 const searchInput = document.querySelector('#searchInput');
 const loading = document.querySelector('.loading');
 const pagination = document.querySelector('.pagination');
-const booContainer = document.querySelector('.book__container');
-//@TODO remove it after app is completed
-formWrapper.style.cssText = `height: 100px;
-flex-direction: row;`;
-formTitle.textContent = 'oo';
+const bookContainer = document.querySelector('.book__container');
 
 const state = {
   inputValue: '',
   urlComponent: '',
   books: [],
   pageNumber: 1,
+  getBooks(book) {
+    this.books.push(book);
+  },
 };
 
 function setAnimation(elem) {
@@ -36,14 +31,28 @@ function setAnimation(elem) {
   }
 }
 
+function styleForm(layout) {
+  if (window.innerWidth <= 500) {
+    layout.style.cssText = `height: 60px;
+    flex-direction: column;
+        `;
+  } else {
+    layout.style.cssText = `height: 60px;
+      flex-direction: row;`;
+    formTitle.style.fontSize = '2rem';
+  }
+}
+
 /**
- * ANCHOR render
+ * SECTION render
  * @type {async Function}
  */
 async function render() {
+  bookContainer.innerHTML = '';
   pagination.innerHTML = '';
+  state.books = [];
   // to style formWrapper (layout)
-  styleForm(formWrapper);
+  styleForm(formWrapper, formTitle);
 
   // to trim input date and create url component from input value
   state.urlComponent = makeURLComponent(state.inputValue);
@@ -61,14 +70,32 @@ async function render() {
   // to create pagination
   createPageNumbers(state.pageQuantity, pagination, state.pageNumber);
 
-  // to filter the data  and create book object from each
-
+  // to filter the data
+  const docs = await data.docs;
+  docs.forEach(
+    ({ title_suggest, author_name, first_publish_year, subject }) => {
+      const book = new Book();
+      book.title = title_suggest || 'unknown';
+      if (Array.isArray(author_name)) {
+        [book.author] = author_name || 'unknown';
+      } else {
+        book.author = author_name || 'unknown';
+      }
+      book.publishedYear = first_publish_year || 'unknown';
+      book.subjects = subject ? subject.slice(0, 5) : 'No Information';
+      state.getBooks(book);
+    }
+  );
+  // to create book object from each
+  state.books.forEach((book) => {
+    createHTML(book, bookContainer);
+  });
   /**
    * @NOTE stops the loading animation
    */
   setAnimation(loading);
 
-  console.log(data);
+  console.log(state.books);
 }
 
 submitBtn.addEventListener('click', (event) => {
