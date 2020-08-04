@@ -1,5 +1,11 @@
 import { BASE_URL } from './constants.js';
 
+/**
+ * @description fetches a data based on arguments and BASE_URL
+ * @param {string} component
+ * @param {number} page
+ * @returns {Promise}
+ */
 export async function getData(component, page = null) {
   let response = null;
   if (page) {

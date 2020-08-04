@@ -1,7 +1,5 @@
-/* eslint-disable import/extensions */
-/* eslint-disable camelcase */
 import { Book } from './helper/class.helper.js';
-import { makeURLComponent } from './helper/function.helper.js';
+import { makeURLComponent, setAnimation } from './helper/function.helper.js';
 import { getData } from './helper/fetch.helper.js';
 import { createHTML, createPageNumbers } from './helper/dom.helper.js';
 
@@ -23,14 +21,11 @@ const state = {
   },
 };
 
-function setAnimation(elem) {
-  if (elem.classList.contains('start-loading')) {
-    elem.classList.remove('start-loading');
-  } else {
-    elem.classList.add('start-loading');
-  }
-}
-
+/**
+ * @description changes the hight and and direction of passed in argument
+ * @param {HTMLElement} layout
+ * @returns {void}
+ */
 function styleForm(layout) {
   if (window.innerWidth <= 500) {
     layout.style.cssText = `height: 60px;
@@ -44,8 +39,9 @@ function styleForm(layout) {
 }
 
 /**
- * SECTION render
+ * @description all the basic functionality happens here
  * @type {async Function}
+ * @returns {void}
  */
 async function render() {
   bookContainer.innerHTML = '';
@@ -56,9 +52,8 @@ async function render() {
 
   // to trim input date and create url component from input value
   state.urlComponent = makeURLComponent(state.inputValue);
-  /**
-   * @NOTE starts the loading animation
-   */
+
+  // starts the loading animation
   setAnimation(loading);
 
   const data = await getData(state.urlComponent, state.pageNumber);
@@ -90,12 +85,9 @@ async function render() {
   state.books.forEach((book) => {
     createHTML(book, bookContainer);
   });
-  /**
-   * @NOTE stops the loading animation
-   */
-  setAnimation(loading);
 
-  console.log(state.books);
+  // stops the loading animation
+  setAnimation(loading);
 }
 
 submitBtn.addEventListener('click', (event) => {

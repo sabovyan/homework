@@ -1,3 +1,10 @@
+/**
+ * @description creates html elements and append them to element that passed in as an argument
+ * @param {object} book
+ * @param {HTMLElement} element
+ * @returns {HTMLElement}
+ */
+
 export function createHTML(book, element) {
   const item = document.createElement('div');
   item.classList.add('book');
@@ -23,6 +30,21 @@ export function createHTML(book, element) {
 
   return item;
 }
+
+/**
+ * @description creates html elements and append them to element that passed in as an argument
+ * @param {object} book
+ * @param {HTMLElement} element
+ * @returns {void}
+ */
+
+/**
+ * @description create HTML elements that are indicating the quantity of pages
+ * @param {number} quantity
+ * @param {HTMLElement} pages
+ * @param {(string\number)} pageNumber
+ * @returns {HTMLElement}
+ */
 
 export const createPageNumbers = (quantity, pages, pageNumber) => {
   if (quantity <= 1) {
