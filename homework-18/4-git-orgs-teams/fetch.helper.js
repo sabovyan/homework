@@ -1,3 +1,5 @@
+import { TOKEN } from './constants.js';
+
 /**
  * @description takes generated token and fetches data from the organization
  * @param {link} url
@@ -7,7 +9,7 @@ export async function doFetch(url, login) {
   const method = {
     method: 'GET',
     headers: {
-      authorization: 'Token 7033b3d47d4059b90fc1dd6bac4b952e120ee70d',
+      authorization: `Token ${TOKEN}`,
     },
   };
 

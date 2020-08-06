@@ -1,9 +1,7 @@
 import { Member } from './class.helper.js';
 import { doFetch } from './fetch.helper.js';
 import { createHTML } from './dom.helper.js';
-
-const BASE_URL = 'https://api.github.com/orgs/Advanced-JS-May/members';
-const MEMBER_URL = 'https://api.github.com/users';
+import { BASE_URL, MEMBER_URL } from './constants.js';
 
 const container = document.querySelector('.container');
 
