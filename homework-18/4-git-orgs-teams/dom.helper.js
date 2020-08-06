@@ -1,7 +1,11 @@
+/**
+ * @description a function that is going to create  html elements
+ * @param {object} member
+ * @returns {HTMLElement}
+ */
 export function createHTML(member) {
   const container = document.createElement('div');
   container.classList.add('member__container');
-  // container.style.background = ``;
   container.style.cssText = `
   background: url(${member.personal.avatar_url});
   background-size: 100%;
@@ -11,7 +15,8 @@ export function createHTML(member) {
 
   const list = document.createElement('ul');
   list.classList.add('details__list');
-  for (let [key, val] of Object.entries(member)) {
+
+  for (const [key, val] of Object.entries(member)) {
     const item = document.createElement('li');
     item.classList.add('details__item');
 

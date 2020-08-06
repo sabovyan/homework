@@ -7,9 +7,15 @@ const MEMBER_URL = 'https://api.github.com/users';
 
 const container = document.querySelector('.container');
 
+/**
+ * @type {Function}
+ * @returns {Promise} a promice with all the members
+ * @example
+ * getData();
+ */
 async function getData() {
   const members = await doFetch(BASE_URL);
-  members.forEach(async function eachMember(member) {
+  members.forEach(async (member) => {
     const memberData = await doFetch(MEMBER_URL, member.login);
     const {
       avatar_url,
@@ -20,7 +26,7 @@ async function getData() {
       public_repos,
     } = memberData;
 
-    let newMember = new Member(
+    const newMember = new Member(
       avatar_url,
       html_url,
       location,
@@ -28,15 +34,10 @@ async function getData() {
       name,
       public_repos
     );
-    let elem = createHTML(newMember);
+    const elem = createHTML(newMember);
     container.append(elem);
   });
 
   return members;
 }
-
-function render() {
-  getData();
-}
-
-render();
+getData();
