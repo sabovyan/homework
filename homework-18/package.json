@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cssfixer": "npx postcss 3-book_re/style/*.css --use autoprefixer -d build/"
+    "cssfixer": "npx postcss 3-book_re/style/*.css --use autoprefixer -d build/",
+    "bs": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --no-notify"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
     "postcss-cli": "^7.1.1"
   }
 }
