@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Range.module.css';
+import PropTypes from 'prop-types';
 
 function Range(props) {
 	return (
@@ -15,4 +16,10 @@ function Range(props) {
 		</div>
 	);
 }
+
+Range.propTypes = {
+	min: PropTypes.number,
+	max: PropTypes.number,
+};
+
 export default Range;
