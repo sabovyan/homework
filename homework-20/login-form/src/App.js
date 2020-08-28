@@ -12,14 +12,12 @@ class App extends Component {
 			isPasswordValidated: true,
 			open: false,
 			success: false,
-			alertErrorMassage: 'Oops something is wrong',
 			alertSuccessMassage: 'Well Done you did it!',
-			userNameValue: window.localStorage.getItem('username'),
+			userNameValue: window.localStorage.getItem('username') || '',
 			passwordValue: window.localStorage.getItem('password') || '',
 		};
 	}
-
-	handleLoginInput = ({ target: { value } }) => {
+	loginValidation(value) {
 		const reg = /[^0-9 ]{5,18}/gi;
 		const res = reg.test(value);
 
@@ -35,9 +33,23 @@ class App extends Component {
 		this.setState({
 			userNameValue: value,
 		});
+	}
+
+	handleLoginInput = ({ target: { value } }) => {
+		this.loginValidation(value);
 	};
 
-	handlePasswordInput = ({ target: { value } }) => {
+	handleLoginFocus = () => {
+		this.setState({
+			isLoginValidated: true,
+		});
+	};
+
+	handleLoginBlur = ({ target: { value } }) => {
+		this.loginValidation(value);
+	};
+
+	passwordValidation(value) {
 		const reg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,18}$/gm;
 		const res = reg.test(value);
 		if (!res) {
@@ -52,6 +64,19 @@ class App extends Component {
 		this.setState({
 			passwordValue: value,
 		});
+	}
+
+	handlePasswordInput = ({ target: { value } }) => {
+		this.passwordValidation(value);
+	};
+	handlePasswordFocus = () => {
+		this.setState({
+			isPasswordValidated: true,
+		});
+	};
+
+	handlePasswordBlur = ({ target: { value } }) => {
+		this.passwordValidation(value);
 	};
 
 	handleSubmit = (e) => {
@@ -80,12 +105,11 @@ class App extends Component {
 			open,
 			isPasswordValidated,
 			success,
-			alertErrorMassage,
 			alertSuccessMassage,
 			userNameValue,
 			passwordValue,
 		} = this.state;
-		console.log(userNameValue);
+
 		return (
 			<div className={styles.root}>
 				<form
@@ -104,6 +128,8 @@ class App extends Component {
 						variant="outlined"
 						value={userNameValue}
 						onChange={this.handleLoginInput}
+						onFocus={this.handleLoginFocus}
+						onBlur={this.handleLoginBlur}
 					/>
 
 					<TextField
@@ -111,12 +137,14 @@ class App extends Component {
 						className={styles.input}
 						error={!isPasswordValidated}
 						id="outlined-password-input"
-						label="Password"
+						label={isPasswordValidated ? 'password' : 'Error'}
 						type="password"
 						value={passwordValue}
 						autoComplete="current-password"
 						variant="outlined"
 						onChange={this.handlePasswordInput}
+						onFocus={this.handlePasswordFocus}
+						onBlur={this.handlePasswordBlur}
 					/>
 					<Button
 						type="submit"
@@ -147,9 +175,7 @@ class App extends Component {
 							</IconButton>
 						}
 					>
-						<AlertTitle>
-							{success ? alertSuccessMassage : alertErrorMassage}
-						</AlertTitle>
+						<AlertTitle>{alertSuccessMassage}</AlertTitle>
 					</Alert>
 				</Collapse>
 			</div>
