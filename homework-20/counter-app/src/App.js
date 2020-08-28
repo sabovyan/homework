@@ -5,10 +5,12 @@ import Input from './components/Input/Input';
 import Range from './components/Range/Range';
 import './App.css';
 
+const localState = JSON.parse(window.localStorage.getItem('state'));
+
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
+		this.state = localState || {
 			screenText: 0,
 			step: 1,
 			minValue: 0,
@@ -34,7 +36,6 @@ class App extends Component {
 	};
 
 	handleMinValue = ({ target: { value } }) => {
-		// const normalizedValue = Number(e.target.value);
 		if (value < 0) {
 			value = 0;
 		}
@@ -58,6 +59,8 @@ class App extends Component {
 
 	render() {
 		const { screenText, minValue, maxValue } = this.state;
+		const storage = window.localStorage;
+		storage.setItem('state', JSON.stringify(this.state));
 
 		return (
 			<div className="App">
