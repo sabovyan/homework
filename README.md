@@ -50,4 +50,12 @@
 >
 > 1.  🔗 [homework-3](https://github.com/sabovyan/homework/tree/master/homework-3) -->
 
+> Project
+>
+> 8.  🔗 [homework-19](https://github.com/sabovyan/countries)
+
+> React
+>
+> 9.  🔗 [homework-20](https://github.com/sabovyan/homework/tree/master/homework-20)
+
 ---
