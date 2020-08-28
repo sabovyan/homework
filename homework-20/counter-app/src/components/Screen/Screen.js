@@ -1,11 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Screen.css';
-export default class Screen extends Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		return <div className="screen">{this.props.screenText}</div>;
-	}
+function Screen(props) {
+	return <div className="screen">{props.screenText}</div>;
 }
+export default Screen;
