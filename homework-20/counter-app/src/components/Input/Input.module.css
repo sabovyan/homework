@@ -1,0 +1,12 @@
+.section {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column-reverse;
+	font-size: 1.5rem;
+}
+.section label {
+	width: 100%;
+}
+.section input {
+	width: 60px;
+}
