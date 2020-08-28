@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { TextField, Button, Collapse, IconButton } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import { TextField, Button, Collapse } from '@material-ui/core';
 import { Alert, AlertTitle } from '@material-ui/lab';
 import styles from './App.module.css';
 
@@ -161,8 +162,7 @@ class App extends Component {
 					<Alert
 						severity={success ? 'success' : 'error'}
 						action={
-							<IconButton
-								aria-label="close"
+							<Button
 								color="inherit"
 								size="small"
 								onClick={() => {
@@ -172,7 +172,7 @@ class App extends Component {
 								}}
 							>
 								close
-							</IconButton>
+							</Button>
 						}
 					>
 						<AlertTitle>{alertSuccessMassage}</AlertTitle>
@@ -182,4 +182,25 @@ class App extends Component {
 		);
 	}
 }
+
+TextField.PropTypes = {
+	error: PropTypes.bool,
+	label: PropTypes.string,
+	value: PropTypes.string,
+};
+
+Button.PropTypes = {
+	disabled: PropTypes.bool,
+};
+Collapse.PropTypes = {
+	in: PropTypes.bool,
+};
+Alert.PropTypes = {
+	severity: PropTypes.string,
+	action: PropTypes.node,
+};
+
+AlertTitle.PropTypes = {
+	alertSuccessMassage: PropTypes.string,
+};
 export default App;
