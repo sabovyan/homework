@@ -4,6 +4,7 @@
 
 | #   | Topic                      |                                      Link                                      |
 | :-- | :------------------------- | :----------------------------------------------------------------------------: |
+| 10. | Jest                       | 🔗 [homework-22](https://github.com/sabovyan/homework/tree/master/homework-22) |
 | 9.  | React                      | 🔗 [homework-20](https://github.com/sabovyan/homework/tree/master/homework-20) |
 | 8.  | Project                    |            🔗 [homework-19](https://github.com/sabovyan/countries)             |
 | 7.  | Promise                    | 🔗 [homework-18](https://github.com/sabovyan/homework/tree/master/homework-18) |
