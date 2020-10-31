@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest --config=jest.config.json --watch"
+    "test": "jest --config=jest.config.json --watchAll"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "jest": "^26.6.1"
   },
   "dependencies": {
-    "eslint-plugin-jest": "^24.1.0"
+    "eslint-plugin-jest": "^24.1.0",
+    "node-fetch": "^2.6.1"
   }
 }
