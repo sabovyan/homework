@@ -1,0 +1,8 @@
+{
+  "name": "my-project",
+  "jest": {
+    "verbose": true
+  },
+  "collectCoverage": true,
+  "coveragePathIgnorePatterns": ["/node_modules"]
+}
